@@ -60,12 +60,11 @@ const asciiVariants = [
     "┴ ┴ ┴ └─┘└─┘┴ ┴    ┴ ┴ ┴─┴┘┴ ┴ └┘ ",
   ].join("\n"),
 
-  // 8. Cyberpunk Monogram Banner
+  // 8. Minimalist Box Frame (AYUSH YADAV)
   [
-    "//====================================\\\\",
-    "||    A Y U S H   Y A D A V           ||",
-    "||    BACKEND & APPLIED AI SYSTEMS    ||",
-    "\\\\====================================//",
+    "//==================================\\\\",
+    "||       A Y U S H   Y A D A V      ||",
+    "\\\\==================================//",
   ].join("\n"),
 
   // 9. Minimalist Dot-Matrix
