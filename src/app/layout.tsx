@@ -56,7 +56,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth`}
     >
-      <body className="bg-[#08090D] text-[#F0F4FC] min-h-screen selection:bg-cyan-500/30 selection:text-white flex flex-col font-sans relative antialiased">
+      <body className="bg-[#09090b] text-[#f4f4f5] min-h-screen selection:bg-zinc-800 selection:text-white flex flex-col font-sans relative antialiased overflow-x-hidden">
+        {/* Subtle Ambient Background Motion Layer */}
+        <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+          <div className="absolute inset-0 ambient-grid opacity-30" />
+          <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-zinc-800/20 blur-[130px] ambient-orb-1" />
+          <div className="absolute -bottom-40 -right-40 w-[550px] h-[550px] rounded-full bg-cyan-950/15 blur-[140px] ambient-orb-2" />
+        </div>
+
         {children}
       </body>
     </html>
