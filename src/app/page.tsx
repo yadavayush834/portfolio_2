@@ -35,26 +35,14 @@ export default function MinimalPortfolio() {
     <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-zinc-800 selection:text-white py-16 sm:py-24 px-6">
       <div className="max-w-2xl mx-auto space-y-16">
         {/* Header / Intro */}
-        <section className="space-y-6">
+        <section className="space-y-4">
           <AsciiBanner />
 
-          <div className="flex items-start justify-between gap-4">
-            <div className="space-y-1.5">
-              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
-                {profileData.name}
-              </h1>
-              <p className="text-sm text-zinc-400 font-mono">
-                {profileData.title} • {profileData.location}
-              </p>
-            </div>
+          <p className="text-xs sm:text-sm text-zinc-400 font-mono">
+            {profileData.title} • {profileData.location}
+          </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-zinc-300">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Available</span>
-            </div>
-          </div>
-
-          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light pt-1">
             I engineer scalable backend systems, real-time WebSocket applications with cryptographic authentication, and applied AI pipelines. Currently building semantic recommendation modules at{" "}
             <span className="text-white font-medium">Digital India Corporation (Ministry of Textiles)</span>.
           </p>

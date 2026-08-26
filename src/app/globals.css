@@ -39,50 +39,21 @@ body {
   color: #fafafa;
 }
 
-/* Ambient Motion Background Keyframes */
-@keyframes ambient-float-1 {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(60px, -40px) scale(1.1);
-  }
-  66% {
-    transform: translate(-40px, 50px) scale(0.95);
-  }
+/* Hide scrollbars globally on pre and designated elements */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-@keyframes ambient-float-2 {
-  0%, 100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(-70px, 60px) scale(1.15);
-  }
-  66% {
-    transform: translate(50px, -50px) scale(0.9);
-  }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-@keyframes subtle-drift {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 40px 40px;
-  }
+pre {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.ambient-orb-1 {
-  animation: ambient-float-1 22s ease-in-out infinite;
-}
-
-.ambient-orb-2 {
-  animation: ambient-float-2 28s ease-in-out infinite;
-}
-
-.ambient-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
-  animation: subtle-drift 60s linear infinite;
+pre::-webkit-scrollbar {
+  display: none;
 }
