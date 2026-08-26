@@ -255,62 +255,62 @@ export default function MinimalPortfolio() {
         </section>
 
         {/* Education & Achievements */}
-        <section className="space-y-4">
+        <section className="space-y-6">
           <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500">
             Education & Certifications
           </h2>
 
-          <div className="space-y-2.5 text-xs">
+          <div className="space-y-4 text-xs">
             {/* B.Tech Degree */}
-            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <div>
-                <span className="font-medium text-white">
+            <div className="space-y-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-white">
                   B.Tech in Computer Science & Engineering
                 </span>
-                <div className="text-zinc-400">
-                  Dronacharya College of Engineering (2024–2028)
-                </div>
+                <span className="font-mono text-zinc-400 text-xs shrink-0">8.64 CGPA</span>
               </div>
-              <span className="font-mono text-zinc-300 text-xs">8.64 CGPA</span>
+              <div className="text-zinc-400">
+                Dronacharya College of Engineering (2024–2028)
+              </div>
             </div>
 
             {/* Infosys C++ */}
-            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <div>
-                <span className="font-medium text-white">
+            <div className="space-y-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-white">
                   Infosys Springboard: C++ Programming
                 </span>
-                <div className="text-zinc-400">
-                  Object-oriented architecture, memory management & STL efficiency
-                </div>
+                <span className="font-mono text-emerald-400 text-xs shrink-0">100% Score</span>
               </div>
-              <span className="font-mono text-emerald-400 text-xs shrink-0">100% Score</span>
+              <div className="text-zinc-400">
+                Object-oriented architecture, memory management & STL efficiency
+              </div>
             </div>
 
             {/* NPTEL DSA */}
-            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <div>
-                <span className="font-medium text-white">
+            <div className="space-y-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-white">
                   NPTEL: Data Structures & Algorithms
                 </span>
-                <div className="text-zinc-400">
-                  IIT certified coursework in graph algorithms & dynamic programming
-                </div>
+                <span className="font-mono text-zinc-400 text-xs shrink-0">68% Score</span>
               </div>
-              <span className="font-mono text-zinc-300 text-xs shrink-0">68% Score</span>
+              <div className="text-zinc-400">
+                IIT certified coursework in graph algorithms & dynamic programming
+              </div>
             </div>
 
             {/* 300+ DSA Problems */}
-            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <div>
-                <span className="font-medium text-white">
+            <div className="space-y-1">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-white">
                   300+ Algorithmic Problems Solved
                 </span>
-                <div className="text-zinc-400">
-                  Active competitive problem solving across LeetCode & CodeChef
-                </div>
+                <span className="font-mono text-amber-400 text-xs shrink-0">Active Rank</span>
               </div>
-              <span className="font-mono text-amber-400 text-xs shrink-0">Active Rank</span>
+              <div className="text-zinc-400">
+                Active competitive problem solving across LeetCode & CodeChef
+              </div>
             </div>
           </div>
         </section>
