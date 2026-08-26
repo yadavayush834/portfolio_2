@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { profileData } from "@/data/profile";
 import { projectsData, ProjectItem } from "@/data/projects";
-import { GithubIcon, XIcon } from "@/components/ui/Icons";
+import { GithubIcon, XIcon, LinkedinIcon } from "@/components/ui/Icons";
 import { AsciiBanner } from "@/components/ui/AsciiBanner";
 import {
   Download,
@@ -127,6 +127,17 @@ export default function MinimalPortfolio() {
             >
               <XIcon className="w-3.5 h-3.5" />
               <span>𝕏</span>
+              <ArrowUpRight className="w-3 h-3 dark:text-zinc-500 text-zinc-400" />
+            </a>
+
+            <a
+              href={profileData.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg dark:bg-zinc-900 bg-white border dark:border-zinc-800 border-zinc-200 dark:text-zinc-300 text-zinc-700 dark:hover:text-white hover:text-zinc-950 dark:hover:border-zinc-700 hover:border-zinc-400 text-xs transition-all"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
               <ArrowUpRight className="w-3 h-3 dark:text-zinc-500 text-zinc-400" />
             </a>
 
@@ -303,18 +314,15 @@ export default function MinimalPortfolio() {
         </section>
 
         {/* Skills Section */}
-        <section className="space-y-4">
+        <section className="space-y-6">
           <h2 className="text-xs font-mono uppercase tracking-widest dark:text-zinc-500 text-zinc-400">
             Skills & Technologies
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 text-xs">
             {profileData.skillCategories.map((cat) => (
-              <div
-                key={cat.id}
-                className="p-3.5 rounded-xl dark:bg-zinc-900/40 bg-white border dark:border-zinc-850 border-zinc-200 space-y-1.5"
-              >
-                <div className="font-mono dark:text-zinc-400 text-zinc-500 text-[11px]">
+              <div key={cat.id} className="space-y-1">
+                <div className="font-mono dark:text-zinc-400 text-zinc-500 text-xs">
                   {cat.name}
                 </div>
                 <div className="dark:text-zinc-300 text-zinc-700 leading-relaxed">
@@ -351,7 +359,7 @@ export default function MinimalPortfolio() {
                 <span className="text-sm font-medium dark:text-white text-zinc-900">
                   Infosys Springboard: C++ Programming
                 </span>
-                <span className="font-mono text-emerald-600 dark:text-emerald-400 text-xs shrink-0 font-medium">100% Score</span>
+                <span className="font-mono dark:text-zinc-400 text-zinc-500 text-xs shrink-0">100% Score</span>
               </div>
               <div className="dark:text-zinc-400 text-zinc-500">
                 Object-oriented architecture, memory management & STL efficiency
@@ -377,7 +385,7 @@ export default function MinimalPortfolio() {
                 <span className="text-sm font-medium dark:text-white text-zinc-900">
                   300+ Algorithmic Problems Solved
                 </span>
-                <span className="font-mono text-amber-600 dark:text-amber-400 text-xs shrink-0 font-medium">Active Rank</span>
+                <span className="font-mono dark:text-zinc-400 text-zinc-500 text-xs shrink-0">Active Rank</span>
               </div>
               <div className="dark:text-zinc-400 text-zinc-500">
                 Active competitive problem solving across LeetCode & CodeChef

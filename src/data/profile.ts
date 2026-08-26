@@ -51,6 +51,7 @@ export const profileData = {
   socials: {
     github: "https://github.com/yadavayush834",
     x: "https://x.com/sudorunner0",
+    linkedin: "https://www.linkedin.com/in/ayush-yadav-537614265/",
     leetcode: "https://leetcode.com/u/ayushwell100",
     email: "mailto:ayushwell100@gmail.com",
   },

@@ -30,8 +30,19 @@ body.dark {
   box-sizing: border-box;
 }
 
-html {
+/* Hide scrollbars globally across all browsers */
+html,
+body {
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0px;
+  background: transparent;
 }
 
 body {
@@ -59,6 +70,7 @@ body.dark ::selection {
 /* Hide scrollbars globally on pre and designated elements */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+  width: 0px;
 }
 
 .no-scrollbar {
@@ -73,4 +85,5 @@ pre {
 
 pre::-webkit-scrollbar {
   display: none;
+  width: 0px;
 }
