@@ -31,7 +31,7 @@ export default function MinimalPortfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-zinc-800 selection:text-white py-16 sm:py-24 px-6">
+    <div className="min-h-screen bg-transparent text-[#f4f4f5] antialiased selection:bg-zinc-800 selection:text-white py-16 sm:py-24 px-6 relative z-10">
       <div className="max-w-2xl mx-auto space-y-16">
         {/* Header / Intro */}
         <section className="space-y-6">
