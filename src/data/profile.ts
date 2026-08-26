@@ -144,12 +144,14 @@ export const profileData = {
       name: "Core Languages",
       tag: "Runtime",
       items: [
-        { name: "TypeScript", level: "Production" },
-        { name: "JavaScript", level: "Production" },
+        { name: "C++ (STL & OOP)", level: "Advanced" },
+        { name: "C (Systems & Raylib)", level: "Advanced" },
         { name: "Python", level: "Production" },
-        { name: "C++", level: "Advanced" },
+        { name: "TypeScript", level: "Production" },
+        { name: "JavaScript (ES6+)", level: "Production" },
         { name: "PHP", level: "Applied" },
-        { name: "SQL", level: "Production" }
+        { name: "SQL", level: "Production" },
+        { name: "Bash", level: "Advanced" }
       ]
     },
     {
@@ -157,26 +159,29 @@ export const profileData = {
       name: "Backend & Systems",
       tag: "Architecture",
       items: [
-        { name: "Node.js", level: "Production" },
-        { name: "Express.js", level: "Production" },
+        { name: "NestJS", level: "Production" },
         { name: "FastAPI", level: "Production" },
+        { name: "Express.js", level: "Production" },
+        { name: "Node.js", level: "Production" },
         { name: "Socket.IO (WebSockets)", level: "Production" },
-        { name: "REST API Design", level: "Production" },
-        { name: "Magento 2", level: "Applied" }
+        { name: "API Scaling (10k+ QPS)", level: "Production" },
+        { name: "REST & GraphQL APIs", level: "Production" },
+        { name: "Magento 2 REST APIs", level: "Applied" }
       ]
     },
     {
       id: "ai-vision",
-      name: "AI & Computer Vision",
+      name: "Applied AI, Agents & Vision",
       tag: "Intelligence",
       items: [
         { name: "PyTorch", level: "Advanced" },
+        { name: "LLM Autonomous Agents", level: "Production" },
         { name: "TensorFlow.js", level: "Production" },
-        { name: "OpenCV", level: "Advanced" },
-        { name: "MediaPipe", level: "Production" },
+        { name: "MediaPipe (Gesture AI)", level: "Production" },
         { name: "OpenSearch k-NN", level: "Production" },
-        { name: "Ollama (Embeddings)", level: "Production" },
-        { name: "AWS Bedrock", level: "Applied" }
+        { name: "Ollama (Local Embeddings)", level: "Production" },
+        { name: "AWS Bedrock", level: "Applied" },
+        { name: "OpenCV", level: "Advanced" }
       ]
     },
     {
@@ -185,24 +190,36 @@ export const profileData = {
       tag: "Persistence",
       items: [
         { name: "PostgreSQL", level: "Production" },
-        { name: "MongoDB", level: "Production" },
         { name: "MySQL", level: "Production" },
+        { name: "Redis (Caching/Queues)", level: "Production" },
+        { name: "MongoDB", level: "Production" },
         { name: "Supabase", level: "Production" },
-        { name: "Firebase", level: "Applied" },
-        { name: "ChromaDB (Vector)", level: "Advanced" }
+        { name: "ChromaDB (Vector Search)", level: "Advanced" }
       ]
     },
     {
-      id: "security-tools",
-      name: "Security & DevOps",
-      tag: "Verification",
+      id: "security-web3",
+      name: "Security, Web3 & Graphics",
+      tag: "Protocols",
       items: [
-        { name: "ethers.js / ECC Auth", level: "Advanced" },
+        { name: "Cryptographic Auth (ECC/ECDSA)", level: "Advanced" },
         { name: "BIP-39 & Signatures", level: "Advanced" },
+        { name: "Solana Anchor / Web3", level: "Advanced" },
+        { name: "Raylib (C Game Dev)", level: "Advanced" },
+        { name: "Passport.js & JWT", level: "Production" }
+      ]
+    },
+    {
+      id: "devops-tooling",
+      name: "DevOps & Tooling",
+      tag: "Infrastructure",
+      items: [
+        { name: "Docker", level: "Production" },
         { name: "Git & GitHub Actions", level: "Production" },
-        { name: "Postman API Suite", level: "Production" },
+        { name: "Next.js & Tailwind CSS", level: "Production" },
+        { name: "Postman / APIDash", level: "Production" },
         { name: "Jest / Vitest", level: "Production" },
-        { name: "Vercel / Docker", level: "Production" }
+        { name: "Linux / Arch Environment", level: "Production" }
       ]
     }
   ] as SkillCategory[]
