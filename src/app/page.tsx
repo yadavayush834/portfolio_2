@@ -260,7 +260,8 @@ export default function MinimalPortfolio() {
             Education & Certifications
           </h2>
 
-          <div className="space-y-3 text-xs">
+          <div className="space-y-2.5 text-xs">
+            {/* B.Tech Degree */}
             <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
               <div>
                 <span className="font-medium text-white">
@@ -273,16 +274,43 @@ export default function MinimalPortfolio() {
               <span className="font-mono text-zinc-300 text-xs">8.64 CGPA</span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 space-y-1">
-              <div className="flex items-center justify-between">
+            {/* Infosys C++ */}
+            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
                 <span className="font-medium text-white">
                   Infosys Springboard: C++ Programming
                 </span>
-                <span className="font-mono text-emerald-400 text-xs">100% Score</span>
+                <div className="text-zinc-400">
+                  Object-oriented architecture, memory management & STL efficiency
+                </div>
               </div>
-              <p className="text-zinc-400">
-                Data Structures & Algorithms (NPTEL - 68%) • 200+ DSA problems solved on LeetCode & CodeChef.
-              </p>
+              <span className="font-mono text-emerald-400 text-xs shrink-0">100% Score</span>
+            </div>
+
+            {/* NPTEL DSA */}
+            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <span className="font-medium text-white">
+                  NPTEL: Data Structures & Algorithms
+                </span>
+                <div className="text-zinc-400">
+                  IIT certified coursework in graph algorithms & dynamic programming
+                </div>
+              </div>
+              <span className="font-mono text-zinc-300 text-xs shrink-0">68% Score</span>
+            </div>
+
+            {/* 300+ DSA Problems */}
+            <div className="p-3.5 rounded-xl bg-zinc-900/40 border border-zinc-850 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <span className="font-medium text-white">
+                  300+ Algorithmic Problems Solved
+                </span>
+                <div className="text-zinc-400">
+                  Active competitive problem solving across LeetCode & CodeChef
+                </div>
+              </div>
+              <span className="font-mono text-amber-400 text-xs shrink-0">Active Rank</span>
             </div>
           </div>
         </section>

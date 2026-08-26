@@ -54,7 +54,7 @@ export const profileData = {
     email: "mailto:ayushwell100@gmail.com",
   },
   metrics: [
-    { label: "LeetCode & DSA", value: "200+", detail: "Problems solved with optimal complexity" },
+    { label: "LeetCode & DSA", value: "300+", detail: "Problems solved with optimal complexity" },
     { label: "Academic CGPA", value: "8.64", detail: "B.Tech Computer Science & Engineering" },
     { label: "Infosys C++ Exam", value: "100%", detail: "Springboard Verified Certification" },
     { label: "Govt. Ministry Project", value: "Live", detail: "Digital India Corp (IndiaHandmade)" },
@@ -129,7 +129,7 @@ export const profileData = {
       description: "Rigorous theoretical and applied coursework in graph theory, dynamic programming, and asymptotic analysis."
     },
     {
-      title: "200+ Algorithmic Problems Solved",
+      title: "300+ Algorithmic Problems Solved",
       issuer: "LeetCode & CodeChef",
       score: "Active Rank",
       verificationBadge: "Competitive Solver",
