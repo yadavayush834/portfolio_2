@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { profileData } from "@/data/profile";
 import { projectsData, ProjectItem } from "@/data/projects";
 import { GithubIcon } from "@/components/ui/Icons";
+import { AsciiBanner } from "@/components/ui/AsciiBanner";
 import {
   Download,
   Mail,
@@ -31,10 +32,12 @@ export default function MinimalPortfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent text-[#f4f4f5] antialiased selection:bg-zinc-800 selection:text-white py-16 sm:py-24 px-6 relative z-10">
+    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-zinc-800 selection:text-white py-16 sm:py-24 px-6">
       <div className="max-w-2xl mx-auto space-y-16">
         {/* Header / Intro */}
         <section className="space-y-6">
+          <AsciiBanner />
+
           <div className="flex items-start justify-between gap-4">
             <div className="space-y-1.5">
               <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">

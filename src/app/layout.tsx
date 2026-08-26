@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BackgroundMotion } from "@/components/ui/BackgroundMotion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,9 +57,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth`}
     >
       <body className="bg-[#09090b] text-[#f4f4f5] min-h-screen selection:bg-zinc-800 selection:text-white flex flex-col font-sans relative antialiased overflow-x-hidden">
-        {/* Dynamic Canvas Background with drifting constellation particles & ambient orbs */}
-        <BackgroundMotion />
-
         {children}
       </body>
     </html>
