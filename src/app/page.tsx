@@ -20,6 +20,7 @@ import {
 export default function MinimalPortfolio() {
   const [copied, setCopied] = useState(false);
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(profileData.email);
@@ -151,7 +152,7 @@ export default function MinimalPortfolio() {
           </div>
 
           <div className="space-y-3">
-            {projectsData.slice(0, 5).map((project) => {
+            {(showAllProjects ? projectsData : projectsData.slice(0, 3)).map((project) => {
               const isExpanded = expandedProjectId === project.id;
               return (
                 <div
@@ -228,6 +229,16 @@ export default function MinimalPortfolio() {
                 </div>
               );
             })}
+          </div>
+
+          {/* See More Projects Toggle */}
+          <div className="pt-1">
+            <button
+              onClick={() => setShowAllProjects(!showAllProjects)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400 hover:text-white hover:border-zinc-700 transition-all cursor-pointer"
+            >
+              <span>{showAllProjects ? "Show fewer projects ↑" : `See more projects (${projectsData.length}) ↓`}</span>
+            </button>
           </div>
         </section>
 
