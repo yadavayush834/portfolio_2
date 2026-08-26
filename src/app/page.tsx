@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { profileData } from "@/data/profile";
 import { projectsData, ProjectItem } from "@/data/projects";
-import { GithubIcon } from "@/components/ui/Icons";
+import { GithubIcon, XIcon } from "@/components/ui/Icons";
 import { AsciiBanner } from "@/components/ui/AsciiBanner";
 import {
   Download,
@@ -67,6 +67,17 @@ export default function MinimalPortfolio() {
             >
               <GithubIcon className="w-3.5 h-3.5" />
               <span>GitHub</span>
+              <ArrowUpRight className="w-3 h-3 text-zinc-500" />
+            </a>
+
+            <a
+              href={profileData.socials.x}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-zinc-700 text-xs transition-all"
+            >
+              <XIcon className="w-3.5 h-3.5" />
+              <span>𝕏</span>
               <ArrowUpRight className="w-3 h-3 text-zinc-500" />
             </a>
 

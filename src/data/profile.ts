@@ -50,6 +50,7 @@ export const profileData = {
   resumePath: "/Ayush-Yadav-Resume.pdf",
   socials: {
     github: "https://github.com/yadavayush834",
+    x: "https://x.com/sudorunner0",
     leetcode: "https://leetcode.com/u/ayushwell100",
     email: "mailto:ayushwell100@gmail.com",
   },
