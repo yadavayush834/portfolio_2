@@ -27,15 +27,18 @@ export default function MinimalPortfolio() {
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      const dark = savedTheme === "dark";
-      setIsDark(dark);
-      document.documentElement.classList.toggle("dark", dark);
-      document.documentElement.classList.toggle("light", !dark);
-    } else {
-      setIsDark(true);
+    const isDarkMode = savedTheme ? savedTheme === "dark" : true;
+    setIsDark(isDarkMode);
+    if (isDarkMode) {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
     }
   }, []);
 
@@ -43,8 +46,17 @@ export default function MinimalPortfolio() {
     const nextTheme = !isDark;
     setIsDark(nextTheme);
     localStorage.setItem("theme", nextTheme ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", nextTheme);
-    document.documentElement.classList.toggle("light", !nextTheme);
+    if (nextTheme) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      document.body.classList.add("dark");
+      document.body.classList.remove("light");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    }
   };
 
   const handleCopyEmail = () => {
@@ -58,7 +70,7 @@ export default function MinimalPortfolio() {
   };
 
   return (
-    <div className="min-h-screen dark:bg-[#09090b] bg-[#fafafa] dark:text-[#f4f4f5] text-[#18181b] antialiased selection:bg-zinc-300 dark:selection:bg-zinc-800 selection:text-zinc-900 dark:selection:text-white py-16 sm:py-24 px-6 transition-colors duration-200">
+    <div className={`min-h-screen ${isDark ? "dark bg-[#09090b] text-[#f4f4f5]" : "light bg-[#fafafa] text-[#18181b]"} antialiased selection:bg-zinc-300 dark:selection:bg-zinc-800 selection:text-zinc-900 dark:selection:text-white py-16 sm:py-24 px-6 transition-colors duration-200`}>
       <div className="max-w-2xl mx-auto space-y-16">
         {/* Header / Intro */}
         <section className="space-y-4">

@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
-:root {
-  --background: #09090b;
-  --foreground: #f4f4f5;
-  --muted: #71717a;
-  --border: #27272a;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-html.light,
-body.light {
+:root {
   --background: #fafafa;
   --foreground: #09090b;
   --muted: #71717a;
   --border: #e4e4e7;
+}
+
+html.dark,
+body.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --muted: #71717a;
+  --border: #27272a;
 }
 
 @theme inline {
@@ -44,14 +46,14 @@ body {
 }
 
 ::selection {
-  background-color: #27272a;
-  color: #fafafa;
-}
-
-html.light ::selection,
-body.light ::selection {
   background-color: #e4e4e7;
   color: #09090b;
+}
+
+html.dark ::selection,
+body.dark ::selection {
+  background-color: #27272a;
+  color: #fafafa;
 }
 
 /* Hide scrollbars globally on pre and designated elements */
