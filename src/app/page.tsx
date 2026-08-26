@@ -222,25 +222,22 @@ export default function MinimalPortfolio() {
             <span className="text-xs font-mono dark:text-zinc-500 text-zinc-400">Click to expand</span>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-6">
             {(showAllProjects ? projectsData : projectsData.slice(0, 3)).map((project) => {
               const isExpanded = expandedProjectId === project.id;
               return (
-                <div
-                  key={project.id}
-                  className="rounded-xl border dark:border-zinc-850 border-zinc-200 dark:bg-zinc-900/40 bg-white p-4 transition-all duration-200 dark:hover:border-zinc-700 hover:border-zinc-400"
-                >
+                <div key={project.id} className="space-y-2 group">
                   <div
                     onClick={() => toggleProject(project.id)}
                     className="flex items-start justify-between gap-4 cursor-pointer select-none"
                   >
                     <div className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium dark:text-white text-zinc-900 group-hover:text-zinc-600 dark:group-hover:text-zinc-200">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-sm font-medium dark:text-white text-zinc-900 group-hover:dark:text-zinc-200 group-hover:text-zinc-600 transition-colors">
                           {project.title}
                         </span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded dark:bg-zinc-800 bg-zinc-100 dark:text-zinc-400 text-zinc-600">
-                          {project.category}
+                        <span className="text-[11px] font-mono dark:text-zinc-500 text-zinc-400">
+                          • {project.category}
                         </span>
                       </div>
                       <p className="text-xs dark:text-zinc-400 text-zinc-600 leading-relaxed">
@@ -269,7 +266,7 @@ export default function MinimalPortfolio() {
 
                   {/* Expandable Project Details */}
                   {isExpanded && (
-                    <div className="mt-4 pt-4 border-t dark:border-zinc-800/60 border-zinc-200 space-y-3 text-xs dark:text-zinc-300 text-zinc-700">
+                    <div className="pl-3.5 border-l-2 dark:border-zinc-800 border-zinc-200 space-y-3 text-xs dark:text-zinc-300 text-zinc-700 pt-1">
                       <div>
                         <span className="font-mono dark:text-zinc-500 text-zinc-400 uppercase text-[10px] block mb-1">
                           Architecture
@@ -289,7 +286,7 @@ export default function MinimalPortfolio() {
                         {project.techStack.map((tech) => (
                           <span
                             key={tech}
-                            className="px-2 py-0.5 rounded dark:bg-zinc-800 bg-zinc-100 text-[10px] font-mono dark:text-zinc-300 text-zinc-700"
+                            className="px-2 py-0.5 rounded dark:bg-zinc-900 bg-zinc-100 text-[10px] font-mono dark:text-zinc-400 text-zinc-600 border dark:border-zinc-800/60 border-zinc-200"
                           >
                             {tech}
                           </span>
@@ -313,21 +310,21 @@ export default function MinimalPortfolio() {
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section - Line by Line */}
         <section className="space-y-6">
           <h2 className="text-xs font-mono uppercase tracking-widest dark:text-zinc-500 text-zinc-400">
             Skills & Technologies
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8 text-xs">
+          <div className="space-y-3.5 text-xs">
             {profileData.skillCategories.map((cat) => (
-              <div key={cat.id} className="space-y-1">
-                <div className="font-mono dark:text-zinc-400 text-zinc-500 text-xs">
+              <div key={cat.id} className="space-y-0.5 sm:flex sm:items-baseline sm:gap-4">
+                <span className="font-mono dark:text-zinc-400 text-zinc-500 text-xs shrink-0 sm:w-44 block sm:inline font-medium">
                   {cat.name}
-                </div>
-                <div className="dark:text-zinc-300 text-zinc-700 leading-relaxed">
+                </span>
+                <span className="dark:text-zinc-300 text-zinc-700 leading-relaxed text-xs">
                   {cat.items.map((i) => i.name).join(", ")}
-                </div>
+                </span>
               </div>
             ))}
           </div>
