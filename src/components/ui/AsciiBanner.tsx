@@ -90,7 +90,7 @@ export function AsciiBanner() {
       title="Click to switch ASCII style"
     >
       <pre
-        className="font-mono text-[9px] sm:text-[11px] md:text-xs leading-tight text-zinc-400 hover:text-zinc-200 transition-colors duration-150 overflow-hidden no-scrollbar whitespace-pre font-bold tracking-normal"
+        className="font-mono text-[9px] sm:text-[11px] md:text-xs leading-tight text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors duration-150 overflow-hidden no-scrollbar whitespace-pre font-bold tracking-normal"
         aria-label="Ayush Yadav ASCII art"
       >
         {asciiVariants[selectedIdx]}
