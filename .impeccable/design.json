@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T15:22:42.557509+00:00",
+  "title": "Design System: Ayush Yadav Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15% 0.0025 90)",
+          "oklch(27% 0.0044 90)",
+          "oklch(39% 0.0064 90)",
+          "oklch(51% 0.0083 90)",
+          "oklch(63% 0.0077 90)",
+          "oklch(75% 0.0057 90)",
+          "oklch(87% 0.0038 90)",
+          "oklch(95% 0.0025 90)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Dark ink",
+        "tonalRamp": [
+          "oklch(15% 0.0027 100)",
+          "oklch(27% 0.0049 100)",
+          "oklch(39% 0.0071 100)",
+          "oklch(51% 0.0093 100)",
+          "oklch(63% 0.0085 100)",
+          "oklch(75% 0.0064 100)",
+          "oklch(87% 0.0042 100)",
+          "oklch(95% 0.0027 100)"
+        ]
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Reading ink",
+        "tonalRamp": [
+          "oklch(15% 0.0025 100)",
+          "oklch(27% 0.0044 100)",
+          "oklch(39% 0.0064 100)",
+          "oklch(51% 0.0083 100)",
+          "oklch(63% 0.0077 100)",
+          "oklch(75% 0.0057 100)",
+          "oklch(87% 0.0038 100)",
+          "oklch(95% 0.0025 100)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "tonalRamp": [
+          "oklch(15% 0.0041 100)",
+          "oklch(27% 0.0074 100)",
+          "oklch(39% 0.0106 100)",
+          "oklch(51% 0.0139 100)",
+          "oklch(63% 0.0128 100)",
+          "oklch(75% 0.0095 100)",
+          "oklch(87% 0.0063 100)",
+          "oklch(95% 0.0041 100)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Fine rule",
+        "tonalRamp": [
+          "oklch(15% 0.0033 100)",
+          "oklch(27% 0.0059 100)",
+          "oklch(39% 0.0085 100)",
+          "oklch(51% 0.0111 100)",
+          "oklch(63% 0.0103 100)",
+          "oklch(75% 0.0076 100)",
+          "oklch(87% 0.005 100)",
+          "oklch(95% 0.0033 100)"
+        ]
+      },
+      "link": {
+        "role": "primary",
+        "displayName": "Restrained olive",
+        "tonalRamp": [
+          "oklch(15% 0.0123 160)",
+          "oklch(27% 0.0221 160)",
+          "oklch(39% 0.0319 160)",
+          "oklch(51% 0.0417 160)",
+          "oklch(63% 0.0385 160)",
+          "oklch(75% 0.0286 160)",
+          "oklch(87% 0.0188 160)",
+          "oklch(95% 0.0123 160)"
+        ]
+      },
+      "selection": {
+        "role": "neutral",
+        "displayName": "Selection tint",
+        "tonalRamp": [
+          "oklch(15% 0.0049 110)",
+          "oklch(27% 0.0088 110)",
+          "oklch(39% 0.0128 110)",
+          "oklch(51% 0.0167 110)",
+          "oklch(63% 0.0154 110)",
+          "oklch(75% 0.0115 110)",
+          "oklch(87% 0.0075 110)",
+          "oklch(95% 0.0049 110)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Name",
+        "purpose": "Personal identity at the top of the document."
+      },
+      "title": {
+        "displayName": "Project title",
+        "purpose": "Linked project names."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Location, dates and project tools."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "arrow-transition",
+        "value": "transform 160ms ease-out, color 160ms ease-out",
+        "purpose": "Project arrow hover feedback; disabled under reduced motion."
+      },
+      {
+        "name": "scroll",
+        "value": "smooth",
+        "purpose": "Anchor navigation; auto under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Profile link",
+      "kind": "custom",
+      "refersTo": "profile-link",
+      "description": "Quiet external or contact link with an inline arrow.",
+      "html": "<a class=\"ds-link\" href=\"#profile\">GitHub<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-link{font-family:var(--font-sans, Geist, Arial, sans-serif);display:inline-flex;align-items:center;gap:5px;min-height:32px;color:var(--link);font-size:13px;text-decoration:none;text-underline-offset:4px;text-decoration-thickness:1px}.ds-link svg{width:16px;height:16px}.ds-link:hover{text-decoration:underline}:is(.ds-link,.ds-nav a,.ds-project a,.ds-contact):focus-visible{outline:2px solid var(--link);outline-offset:6px;border-radius:1px;}"
+    },
+    {
+      "name": "Profile navigation",
+      "kind": "nav",
+      "description": "A simple row of text destinations.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Profile links\"><a href=\"#email\">Email</a><a href=\"#github\">GitHub</a><a href=\"#linkedin\">LinkedIn</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-sans, Geist, Arial, sans-serif);display:flex;gap:27px}.ds-nav a{display:inline-flex;align-items:center;min-height:32px;color:var(--link);font-size:13px;text-decoration:none;text-underline-offset:4px}.ds-nav a:hover{text-decoration:underline}:is(.ds-link,.ds-nav a,.ds-project a,.ds-contact):focus-visible{outline:2px solid var(--link);outline-offset:6px;border-radius:1px;}@media(max-width:600px){.ds-nav{gap:24px}}"
+    },
+    {
+      "name": "Project row",
+      "kind": "custom",
+      "refersTo": "project-row",
+      "description": "An open project entry with a linked title, description and tools.",
+      "html": "<article class=\"ds-project\"><h3><a href=\"#project\"><span>Project name</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></h3><p class=\"ds-description\">A concise factual project description.</p><p class=\"ds-tools\">Tools / used</p></article>",
+      "css": ".ds-project{font-family:var(--font-sans, Geist, Arial, sans-serif);padding:25px 0;border-bottom:1px solid var(--rule);color:var(--ink)}.ds-project h3{margin:0;font-size:17px;line-height:1.5;font-weight:500}.ds-project a{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:30px;color:inherit;text-decoration:none;text-underline-offset:4px}.ds-project svg{width:16px;height:16px;color:var(--muted);transition:transform 160ms ease-out,color 160ms ease-out}.ds-project a:hover span{text-decoration:underline}.ds-project a:hover svg{color:var(--link);transform:translate(2px,-2px)}.ds-description{max-width:64ch;margin:7px 0 0;color:var(--body-ink);font-size:15px;line-height:1.75}.ds-tools{margin:9px 0 0;color:var(--muted);font-size:12px;line-height:1.7}:is(.ds-link,.ds-nav a,.ds-project a,.ds-contact):focus-visible{outline:2px solid var(--link);outline-offset:6px;border-radius:1px;}@media(max-width:600px){.ds-project{padding:23px 0}.ds-project h3{font-size:16px}}@media(prefers-reduced-motion:reduce){.ds-project svg{transition:none}}"
+    },
+    {
+      "name": "Information section",
+      "kind": "custom",
+      "refersTo": "information-section",
+      "description": "A muted label beside supporting information.",
+      "html": "<section class=\"ds-information\"><h2>Experience</h2><p>Factual supporting information.</p></section>",
+      "css": ".ds-information{font-family:var(--font-sans, Geist, Arial, sans-serif);display:grid;grid-template-columns:150px 1fr;gap:28px;padding-top:36px;margin-top:36px;border-top:1px solid var(--rule)}.ds-information h2{margin:0;color:var(--muted);font-size:14px;font-weight:500;line-height:1.6}.ds-information p{margin:0;color:var(--body-ink);font-size:15px;line-height:1.8}@media(max-width:600px){.ds-information{grid-template-columns:1fr;gap:13px;margin-top:29px;padding-top:28px}}"
+    },
+    {
+      "name": "Contact link",
+      "kind": "custom",
+      "refersTo": "contact-link",
+      "description": "A direct email destination beneath a short invitation.",
+      "html": "<a class=\"ds-contact\" href=\"mailto:hello@example.com\">Email<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-contact{font-family:var(--font-sans, Geist, Arial, sans-serif);display:inline-flex;align-items:center;gap:6px;margin-top:4px;min-height:32px;color:var(--link);font-size:14px;text-decoration:none;text-underline-offset:4px}.ds-contact svg{width:16px;height:16px}.ds-contact:hover{text-decoration:underline}:is(.ds-link,.ds-nav a,.ds-project a,.ds-contact):focus-visible{outline:2px solid var(--link);outline-offset:6px;border-radius:1px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Personal working paper",
+    "overview": "A personal working paper: warm, untextured paper, readable ink, a serif name and quiet sans-serif supporting text. The layout leaves room for factual descriptions and direct links. Thin rules organize the document without introducing cards or decorative surfaces.",
+    "keyCharacteristics": [
+      "Untextured paper and restrained olive links",
+      "One readable column with generous margins",
+      "Serif identity, sans-serif detail",
+      "Flat sections separated by fine rules"
+    ],
+    "rules": [
+      {
+        "name": "The Quiet Ink Rule",
+        "body": "Keep the palette focused on paper, ink and restrained link emphasis.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve the paper background and a clear name at the top.",
+      "Do use concise, factual descriptions and functioning contact and repository links.",
+      "Do retain visible keyboard focus and the skip link.",
+      "Do preserve reading order when information sections stack on mobile."
+    ],
+    "donts": [
+      "Don't add textured paper, decorative hero artwork, cards or badges to this visual world.",
+      "Don't invent skills, repository links or performance claims.",
+      "Don't substitute raster artwork for the current text and SVG presentation."
+    ]
+  }
+}

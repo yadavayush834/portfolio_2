@@ -1,34 +1,29 @@
-# Ayush Yadav - Portfolio
+# Ayush Yadav — portfolio
 
-A minimal single-page personal portfolio focusing on typography, content clarity, and interactive ASCII art banners.
+A single-page portfolio with a warm paper background, a readable name and concise project descriptions.
 
-## Tech Stack
+Live: [ayushyadavres.vercel.app](https://ayushyadavres.vercel.app/)
 
-- Framework: Next.js 16 (App Router)
-- Language: TypeScript
-- Styling: Tailwind CSS v4
-- Deployment: Vercel
+## Run
 
-## Local Development
-
-Install dependencies:
 ```bash
-npm install
-```
-
-Run development server:
-```bash
+npm ci
 npm run dev
 ```
 
-Build for production:
 ```bash
+npm run lint
+npx tsc --noEmit
 npm run build
 ```
 
-## Contact
+## Content
 
-- Email: ayushwell100@gmail.com
-- GitHub: https://github.com/yadavayush834
-- X / Twitter: https://x.com/sudorunner0
-- LinkedIn: https://www.linkedin.com/in/ayush-yadav-537614265/
+- `src/data/profile.ts` — introduction, contact links, past internship, tools and education.
+- `src/data/projects.ts` — selected public projects and their repository URLs.
+- `docs/CONTENT_AUDIT.md` — sources and corrections behind the copy.
+- `DESIGN.md` — visual conventions and tokens.
+
+Do not add performance numbers, proficiency ratings or employment dates without evidence. Project links should resolve to public repositories. The internship is past experience; its end date has not yet been supplied.
+
+The page is server-rendered with Next.js. Contact links work without client-side JavaScript. Vercel Analytics is retained from the existing project. The old PDF resume remains unlinked pending a date/content update.
