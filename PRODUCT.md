@@ -37,3 +37,7 @@ The existing Next.js App Router project deploys from yadavayush834/portfolio_2 t
 - Use direct, functioning project and contact links.
 
 - The owner selected exactly three visible projects: MacHypr, Patchwork Studio and the Indian sign language interpreter. Patchwork must retain feature coverage while its repository stays private. Keep the page compact.
+
+## Minimal personal portfolio rebuild
+
+User authorized a full redesign with independent design decisions. A recruiter or general reader should quickly understand Ayush's work, studies, and interests. Keep exactly three projects and concise prose. Include machine learning study and tools evidenced by projects, Linux distro/desktop customization, and Formula 1. A small original animated, movable pixel penguin sits beside the name. Keep Patchwork private; omit unconfirmed employment dates and proficiency claims.

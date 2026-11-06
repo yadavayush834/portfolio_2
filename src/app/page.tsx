@@ -1,74 +1,55 @@
-import { ArrowUpRight } from "lucide-react";
+import PixelCompanion from "@/components/pixel-companion";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 
 export default function Portfolio() {
   return (
     <>
-      <a className="skip-link" href="#work">Skip to selected work</a>
+      <a className="skip-link" href="#work">Skip to projects</a>
       <main className="paper">
         <header className="introduction">
-          <div className="name-line">
-            <h1>{profile.name}</h1>
-            <span className="location">{profile.location}</span>
-          </div>
-          <p className="occupation">{profile.title} / backend &amp; applied AI</p>
-          <p className="intro-copy">{profile.introduction}</p>
-          <nav className="intro-links" aria-label="Profile links">
-            <a href={`mailto:${profile.email}`}>Email <ArrowUpRight aria-hidden="true" /></a>
-            <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight aria-hidden="true" /></a>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight aria-hidden="true" /></a>
+          <div className="name-line"><h1>{profile.name}</h1><PixelCompanion /></div>
+          <p className="location">Computer science student in Delhi, India.</p>
+          <p className="intro-copy">I build software, study machine learning, and spend a lot of time making Linux feel like my own.</p>
+          <nav className="profile-links" aria-label="Contact and profiles">
+            <a href={`mailto:${profile.email}`}>Email</a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </nav>
         </header>
 
-        <section className="work-section" id="work" aria-labelledby="work-title">
-          <div className="section-heading">
-            <h2 id="work-title">Selected work</h2>
-          </div>
-          <div className="projects">
-            {projects.map((project) => (
-              <article className="project" key={project.name}>
-                <h3>
-                  {project.repository ? <a href={project.repository} target="_blank" rel="noopener noreferrer">
-                    <span>{project.name}</span>
-                    <ArrowUpRight aria-hidden="true" />
-                    <span className="visually-hidden"> — source on GitHub</span>
-                  </a> : <span className="private-project-title">{project.name}<span className="private-label">Private project</span></span>}
-                </h3>
-                <p className="project-description">{project.description}</p>
-                {project.features && <ul className="project-features">{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>}
-              </article>
-            ))}
-          </div>
-
+        <section className="section" id="work" aria-labelledby="work-title">
+          <h2 id="work-title">A few things I’ve built</h2>
+          <div className="projects">{projects.map((project) => (
+            <article className="project" key={project.name}>
+              <div className="project-heading">
+                <h3>{project.repository ? <a href={project.repository} target="_blank" rel="noopener noreferrer">{project.name}</a> : project.name}</h3>
+                {!project.repository && <span className="project-note">Private project</span>}
+              </div>
+              <p>{project.description}</p>
+            </article>
+          ))}</div>
         </section>
 
-        <section className="information-section" aria-labelledby="experience-title">
-          <h2 id="experience-title">Experience</h2>
-          <div className="information-content">
-            <h3>{profile.experience.role}</h3>
-            <p className="organization">{profile.experience.organization}</p>
-            <p>Worked on product recommendations for IndiaHandmade.com.</p>
-          </div>
+        <section className="section" aria-labelledby="experience-title">
+          <h2 id="experience-title">Previously</h2>
+          <p><strong>Backend development intern</strong> at Digital India Corporation, Ministry of Textiles. Worked on product recommendations for IndiaHandmade.com with Magento, OpenSearch, and embeddings.</p>
         </section>
 
-        <section className="information-section" aria-labelledby="tools-title">
-          <h2 id="tools-title">Tools I use</h2>
-          <p className="information-content tools-copy">{profile.tools.join(", ")}.</p>
+        <section className="section" aria-labelledby="skills-title">
+          <h2 id="skills-title">What I work with</h2>
+          <p>Python, JavaScript / TypeScript, React, Rust, PHP, Linux, and Git.</p>
+          <p className="secondary">I’ve studied machine learning and used PyTorch and MediaPipe in my projects.</p>
         </section>
 
-        <section className="information-section" aria-labelledby="education-title">
-          <h2 id="education-title">Education</h2>
-          <div className="information-content">
-            <h3>{profile.education.degree}</h3>
-            <p>{profile.education.institution}<span className="education-period">{profile.education.period}</span></p>
-          </div>
+        <section className="section" aria-labelledby="interests-title">
+          <h2 id="interests-title">Outside the project</h2>
+          <p>I like trying Linux distros and customizing desktop setups, especially Arch and Hyprland. I’m also into Formula 1.</p>
         </section>
 
-        <footer className="footer">
-          <a className="contact-link" href={`mailto:${profile.email}`}>
-            {profile.email} <ArrowUpRight aria-hidden="true" />
-          </a>
+        <footer>
+          <p>B.Tech in Computer Science &amp; Engineering, {profile.education.period}</p>
+          <p>{profile.education.institution}</p>
         </footer>
       </main>
     </>
