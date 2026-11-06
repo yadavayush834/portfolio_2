@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/theme-toggle";
 import PixelCompanion from "@/components/pixel-companion";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
@@ -8,6 +9,7 @@ export default function Portfolio() {
       <a className="skip-link" href="#work">Skip to projects</a>
       <main className="paper">
         <header className="introduction">
+          <ThemeToggle />
           <div className="name-line"><h1>{profile.name}</h1><PixelCompanion /></div>
           <p className="location">Computer science student in Delhi, India.</p>
           <p className="intro-copy">I build software, study machine learning, and spend a lot of time making Linux feel like my own.</p>

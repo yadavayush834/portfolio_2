@@ -7,3 +7,7 @@ The original pixel penguin supports click/Enter to hop, pointer dragging, arrow-
 A fresh visual review inspected all four sizes. Its one required fix was the muted text contrast; the final muted token is #727269 on #faf9f6.
 
 Content reflects previously inspected repositories and user statements: ML study is distinguished from expertise; internship is past tense with no invented dates; private Patchwork remains private. No performance numbers or skill ratings are claimed.
+
+## Dark appearance and walking update
+
+Build and lint pass. Browser coverage includes system dark preference, saved light/dark choice after reload, automatic walking, keyboard jump, touch jump, pause/resume, reduced motion, and 320px overflow. Dark desktop and mobile screenshots inspected. The companion now walks automatically instead of supporting dragging.

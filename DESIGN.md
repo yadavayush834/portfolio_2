@@ -105,3 +105,7 @@ Links and buttons use a 2px green focus outline with 5px offset. The skip link b
 - Do keep companion movement bounded and available from the keyboard.
 - Don't invent project claims, skills or repository destinations.
 - Don't make the companion a prerequisite for reading or navigation.
+
+## Dark appearance and walking companion
+
+Appearance follows the system preference unless the visitor chooses Light or Dark; the choice persists locally. Dark tokens: paper #191a18, ink #eeeee7, body #c3c5bc, muted #a0a396, rule #383b33, link #b5d4ba. The penguin walks back and forth above the name using a 12-second transform loop and a small stepped waddle. Tap, click, Enter or Space triggers a 550ms jump. A pause/resume control stops the loop; it also pauses offscreen or when the document is hidden. Reduced motion disables spatial animation. Dragging was replaced by automatic walking.
