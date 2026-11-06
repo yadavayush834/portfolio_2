@@ -109,3 +109,7 @@ Links and buttons use a 2px green focus outline with 5px offset. The skip link b
 ## Dark appearance and walking companion
 
 Appearance follows the system preference unless the visitor chooses Light or Dark; the choice persists locally. Dark tokens: paper #191a18, ink #eeeee7, body #c3c5bc, muted #a0a396, rule #383b33, link #b5d4ba. The penguin walks back and forth above the name using a 12-second transform loop and a small stepped waddle. Tap, click, Enter or Space triggers a 550ms jump. A pause/resume control stops the loop; it also pauses offscreen or when the document is hidden. Reduced motion disables spatial animation. Dragging was replaced by automatic walking.
+
+## Project workbench redesign
+
+The portfolio now uses a two-column exhibit composition: 260px personal sidebar and a flexible project surface, within a 1240px centered container. Below 760px these stack. Project selector buttons expose one project at a time. MacHypr uses real desktop screenshots; Patchwork offers an explicitly labeled interactive composition sketch; ISL uses an explicitly labeled landmark-flow diagram. The sidebar contains identity, contact links, and native disclosure sections for background, tools and experience. Short text supports the project exhibits. Light/dark themes and the walking penguin are retained.

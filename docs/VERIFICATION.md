@@ -11,3 +11,7 @@ Content reflects previously inspected repositories and user statements: ML study
 ## Dark appearance and walking update
 
 Build and lint pass. Browser coverage includes system dark preference, saved light/dark choice after reload, automatic walking, keyboard jump, touch jump, pause/resume, reduced motion, and 320px overflow. Dark desktop and mobile screenshots inspected. The companion now walks automatically instead of supporting dragging.
+
+## Workbench redesign
+
+Replaced the linear portfolio with a personal sidebar and three selectable exhibits. Tested project switching, MacHypr screenshot selection, Patchwork headline editing and palette selection, ISL flow selection, theme switching, and mobile widths 390/320 without overflow or browser errors. A fresh review found long Patchwork headlines could clip; long headlines now use smaller type and a wider measure. Screenshots in public/work are copied from the user's public MacHypr repository. Patchwork and ISL visuals are labeled illustrative interactions, not live full-product demos.
