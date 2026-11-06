@@ -35,3 +35,5 @@ The existing Next.js App Router project deploys from yadavayush834/portfolio_2 t
 - Describe what a project implements, not its assumed impact or production readiness.
 - Do not infer skill levels from dependencies or forks.
 - Use direct, functioning project and contact links.
+
+- The owner selected exactly three visible projects: MacHypr, Patchwork Studio and the Indian sign language interpreter. Patchwork must retain feature coverage while its repository stays private. Keep the page compact.

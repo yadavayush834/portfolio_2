@@ -12,7 +12,7 @@ colors:
 typography:
   display:
     fontFamily: "Newsreader, Georgia, serif"
-    fontSize: "76px"
+    fontSize: "62px"
     fontWeight: 400
     lineHeight: 1.08
     letterSpacing: "-0.035em"
@@ -128,3 +128,7 @@ Sections remain open and rectangular. Dividers are fine horizontal rules, with n
 - Don't add textured paper, decorative hero artwork, cards or badges to this visual world.
 - Don't invent skills, repository links or performance claims.
 - Don't substitute raster artwork for the current text and SVG presentation.
+
+## Compact portfolio update
+
+The project selection contains three entries, with five concise feature bullets for private Patchwork Studio. Project tool metadata is omitted. Desktop top padding is 42px, project row padding 16px, and information sections use 17px top margin/padding. Mobile preserves readable body text with tighter section gaps.

@@ -27,22 +27,20 @@ export default function Portfolio() {
           </div>
           <div className="projects">
             {projects.map((project) => (
-              <article className="project" key={project.repository}>
+              <article className="project" key={project.name}>
                 <h3>
-                  <a href={project.repository} target="_blank" rel="noopener noreferrer">
+                  {project.repository ? <a href={project.repository} target="_blank" rel="noopener noreferrer">
                     <span>{project.name}</span>
                     <ArrowUpRight aria-hidden="true" />
                     <span className="visually-hidden"> — source on GitHub</span>
-                  </a>
+                  </a> : <span className="private-project-title">{project.name}<span className="private-label">Private project</span></span>}
                 </h3>
                 <p className="project-description">{project.description}</p>
-                <p className="project-tools">{project.tools.join(" / ")}</p>
+                {project.features && <ul className="project-features">{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>}
               </article>
             ))}
           </div>
-          <a className="all-work" href={`${profile.github}?tab=repositories`} target="_blank" rel="noopener noreferrer">
-            More on GitHub <ArrowUpRight aria-hidden="true" />
-          </a>
+
         </section>
 
         <section className="information-section" aria-labelledby="experience-title">
@@ -50,7 +48,7 @@ export default function Portfolio() {
           <div className="information-content">
             <h3>{profile.experience.role}</h3>
             <p className="organization">{profile.experience.organization}</p>
-            <p>{profile.experience.description}</p>
+            <p>Worked on product recommendations for IndiaHandmade.com.</p>
           </div>
         </section>
 
@@ -68,7 +66,6 @@ export default function Portfolio() {
         </section>
 
         <footer className="footer">
-          <p>Have something in mind?</p>
           <a className="contact-link" href={`mailto:${profile.email}`}>
             {profile.email} <ArrowUpRight aria-hidden="true" />
           </a>

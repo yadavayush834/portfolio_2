@@ -26,3 +26,7 @@ The owner requested a short portfolio based on real projects, not inflated or ou
 ## Evidence boundary
 
 The six-item tools line is a conservative selection from the checked projects and source: Python, Rust, JavaScript/TypeScript, PHP, Linux and Git. It is not a claim of proficiency, certification or production experience. Private repositories and public forks are not used as proof of personal skill levels.
+
+## Compact project selection
+
+At the owner’s request, the visible selection is now MacHypr, Patchwork Studio and the Indian sign language interpreter. Patchwork remains private; its features were verified against its repository README and are described without publishing its source or linking visitors to a private repository. The other verified projects above remain audit history, not visible portfolio entries.
